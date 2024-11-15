@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TaskMaster</h1>
+    <nav>
+      <button id="login-btn">Login</button>
+      <button id="register-btn">Register</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Authentication Section -->
+    <section id="auth-section" class="hidden">
+      <form id="auth-form">
+        <h2 id="auth-title">Login</h2>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit" id="auth-submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Task Management Section -->
+    <section id="task-section" class="hidden">
+      <!-- Task Creation Form -->
+      <form id="task-form">
+        <h2>Create a New Task</h2>
+        <input type="text" name="title" placeholder="Task Title" required>
+        <textarea name="description" placeholder="Task Description"></textarea>
+        <select name="priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input type="date" name="deadline">
+        <button type="submit">Add Task</button>
+      </form>
+
+      <!-- Task List -->
+      <h2>Your Tasks</h2>
+      <div id="task-list"></div>
+    </section>
+  </main>
+</body>
+</html>
